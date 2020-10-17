@@ -1,0 +1,348 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: black;
+	font-family: verdana;
+	font-size: 16px;
+}
+.contenedor {
+	max-width: 1000px;
+	margin: auto;
+}
+.cont{
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+}
+
+
+
+@keyframes animacion {
+	0%{
+		opacity: 0;
+		transform: rotateY(90deg);
+	}50%{
+		opacity: 0.5;
+	}100%{
+		opacity: 1;
+	}
+}
+
+h1{
+	color:  #f3f3f3;
+	text-shadow: 0 0 10px white;
+	letter-spacing: 1px;
+	filter: blur(0.5px);
+	-webkit-text-stroke: 2px;
+	-webkit-text-stroke-color: white;
+	font-size: 50px;
+}
+
+header {
+	padding: 40px 0;
+	position: relative;
+}
+
+header .logo {
+	text-align: center;
+	margin-bottom: 40px;
+	animation: animacion 1s linear forwards;
+}
+
+header .logo p {
+	color: #9B9B9B;
+}
+
+p, h2{
+	color: white
+}
+h2{
+	text-transform: uppercase;
+	margin: 1px 0px;
+}
+
+.historia h2{
+	border-bottom: 3px solid white;
+	width: 200px;
+}
+
+.Pregunta h2{
+	border-bottom: 3px solid white;
+	width: 550px;	
+}
+
+.tema h2{
+	border-bottom: 3px solid white;
+	width: 450px;
+}
+
+.Introduccion, .article{
+	text-align: center;
+	display: inline-flex;
+}
+
+.Introduccion:hover{
+	font-size: 17px;
+	text-transform: inherit;
+	transition-duration: 2s;
+}
+p{
+	margin: 10px 0;
+	position: relative;
+}
+.Introduccion img{
+	width: 100%;
+	border-radius: 5px;
+	position: relative;
+	animation: animacion 3s linear forwards;
+}
+.Introduccion p{
+	margin-top: 50px;
+	margin-left: 50px;
+	animation: animacion 3s linear forwards;
+}
+article{
+	display: inline-flex;
+	width: 70%;
+	justify-content: center;
+	align-content: center;
+	margin-left: 100px;
+	max-height: 300px;
+}
+article img{
+	border-radius: 10px;
+	max-height: 80%;
+	position: relative;
+	display: flex;
+}
+article p{
+	margin-top: 80px;
+	width: 70%;
+	margin-left: 50px;
+}
+.historia .section{
+	display: inline-flex;
+}
+.section p{
+	margin-right: 50px; 
+}
+.section img{
+	height: 260px;
+	width: 240px;
+	position: relative;
+}
+.Pregunta {
+	margin-top: -700px;
+	display: inline-flex;
+}
+
+.Pregunta a{
+	height: 100%;
+}
+
+.Pregunta img{
+	height: 300px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.Pregunta .parrafo{
+	width: 50%;
+	margin-right: 100px;
+}
+.historia{
+	animation: animacionDos 5s linear forwards;
+}
+@keyframes animacionDos{
+	0%{
+		opacity: 0;
+	}5%{
+		opacity: 0;
+	}10%{
+		opacity: 0;
+	}20%{
+		opacity: 0;
+	}30%{
+		opacity: 0;
+	}40%{
+		opacity: 0;
+	}50%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+.Pregunta{
+	animation: animacionTres 4s linear forwards;
+}
+.tema{
+	animation: animacionTres 5s linear forwards;	
+}
+.final{
+	animation: animacionTres 6s linear forwards;	
+}
+
+@keyframes animacionTres{
+	0%{
+		opacity: 0;
+		transform: rotateX(180deg);
+	}80%{
+		opacity: 0;
+	}100%{
+		opacity: 1;
+		transform: rotateX(0deg);
+	}
+}
+
+.historia p:hover{
+	font-size: 17px;
+	transition-duration: 1s;
+}
+
+
+/*Editar el scroll*/
+::-webkit-scrollbar{
+	width: 0;
+}
+#scrollPath{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.05);
+}
+#progressBar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	animation: scrol 5s linear infinite;
+}
+@keyframes scrol{
+	0%, 100%{
+		filter:  hue-rotate(0deg);
+	}50%{
+		filter: hue-rotate(360deg);
+	}
+}
+#progressBar:before{
+ 	content: '';
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	background: linear-gradient(to top, #008aff, #00ffe7);
+ 	filter: blur(30px);
+}
+
+/*Fondo*/
+.glowing{
+	position: fixed;
+	min-width: 750px;
+	height: 750px;
+	margin: -150px;
+	transform-origin: right;
+	animation: colorParticula 5s linear infinite; 
+}
+.glowing:nth-child(even){
+	transform-origin: left;
+}
+@keyframes colorParticula{
+	0%{
+		filter: hue-rotate(0deg);
+		transform: rotate(0deg);
+	}100%{
+		filter: hue-rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes aparecer{
+	0%{
+		opacity: 0.5;
+	}50%{
+		opacity: 0.2;
+	}100%{
+		opacity: 1;
+	}
+}
+.glowing span{
+	position: fixed;
+	top: calc(80px * var(--i));
+	bottom: calc(80px * var(--i));
+	left: calc(80px * var(--i));
+	right: calc(80px * var(--i));
+	animation: aparecer 10s linear infinite; 
+}
+
+.glowing span:before{
+	content: '';
+	position: fixed;
+	top: 50%;
+	left: -8px;
+	width: 15px;
+	height: 15px;
+	background: #f00;
+	border-radius: 50%;
+}
+/* verde claro*/
+.glowing span:nth-child( 3n + 1):before{
+	background: rgba(134, 255, 0, 1);
+	box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+				0 0 40px rgba(134, 255, 0, 1),
+				0 0 60px rgba(134, 255, 0, 1),
+				0 0 0 8px rgba(134, 255, 0, .1);
+}
+/* naranja claro*/
+.glowing span:nth-child( 3n + 2):before{
+	background: rgba(255, 214, 0, 1);
+	box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+				0 0 40px rgba(255, 214, 0, 1),
+				0 0 60px rgba(255, 214, 0, 1),
+				0 0 0 8px rgba(255, 214, 0, .1);
+}
+/*azul claro*/
+.glowing span:nth-child( 3n + 3):before{
+	background: rgba(0, 226, 255, 1);
+	box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+				0 0 40px rgba(0, 226, 255, 1),
+				0 0 60px rgba(0, 226, 255, 1),
+				0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child( 3n + 1){
+	animation: particula 10s alternate infinite;
+}
+
+.glowing span:nth-child( 3n + 2){
+	animation: particula-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child( 3n + 3){
+	animation: particula-reverse 8s alternate infinite;
+}
+
+@keyframes particula{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes particula-reverse{
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}

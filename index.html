@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<link rel="stylesheet" href="css/estilo.css">
+	<title>Feeling in Neon Flashes| proyecto</title>
+</head>
+<body>
+	
+<!--Experimento
+<div class="content">
+	<div class="circulo"></div>
+	<div class="circle"></div>
+	<div class="dibujo"></div>
+</div> -->
+
+<!--Darle estilo al Scroll-->
+<div id="progressBar"></div>
+<div id="scrollPath"></div>
+
+<!-- Fondo Animado -->
+<div class="glowing">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+</div>
+<div class="glowing">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+</div>
+<div class="glowing">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+</div>
+<div class="glowing">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+</div>
+
+<!--Contenidor de todo mi html-->
+<div class="contenedor">
+	<header>
+		<div class="logo">
+			<h1>Feeling in Neon Flashes</h1>
+			<p>Presentación del Proyecto de Artes 2020</p>
+		</div>
+
+		<form action="">
+			<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar Emociones" list="menuEmociones">
+			<datalist id="menuEmociones">
+				<option value="Alegría"></option>
+				<option value="Ansiedad"></option>
+				<option value="Nostalgia"></option>
+			</datalist>
+		</form>
+
+		<div class="categorias" id="categorias">
+			<a href="#" class="activo">Todos</a>
+			<a href="#">Alegría</a>
+			<a href="#">Ansiedad</a>
+			<a href="#">Nostalgia</a>
+		</div>
+	</header>
+
+	<section class="grid" id="grid">
+	<!--Categoria de felicidad-->
+		<div class="item"
+		data-categoria="Alegría"
+		data-etiquetas="Alegría alegría felicidad Felicidad gozo Gozo placer Placer diversion Diversion satisfaccion Satisfaccion"
+		data-descripcion="La felicidad no llega cuando conseguimos lo que deseamos.
+		Sino cuando difrutamos lo que tenemos">
+			<div class="item-contenido">
+				<img src="img/emociones/felicidad.png" alt="la Felicidad" title="Felicidad">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Ansiedad"
+		data-etiquetas="Ansiedad ansiedad angustia Angustia Estrés estrés Intranquilidad intranquilidad
+		Angustia angustia Agitación agitación"
+		data-descripcion="El peso de la ansiedad es mayor que el del mal que la provoca">
+			<div class="item-contenido">
+				<img src="img/emociones/Angustia.png" alt="La angustia" title="Angustia">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Ansiedad"
+		data-etiquetas="Ansiedad ansiedad angustia Angustia Estres estres Intranquilidad intranquilidad
+		Angustia angustia Agitación agitación"
+		data-descripcion="El miedo es la incertidumbre en buca de inseguridad">
+			<div class="item-contenido">
+				<img src="img/emociones/Ansiedad.png" alt="La Ansiedad" title="Ansiedad">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Nostalgia"
+		data-etiquetas="Nostalgia nostalgia Soledad soledad Añoranza añoranza"
+		data-descripcion="Los recuerdos son como el Agua... Y hasta a veces nos salen por los ojos.
+		Son un par de ojas secas, que así como ellas estan... arrugadas y negras, nuestros recuerdos tambien lo están.">
+			<div class="item-contenido">
+				<img src="img/emociones/nostalgia.png" alt="La Nostalgia" title="Nostalgia">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Alegría"
+		data-etiquetas="Alegría alegría felicidad Felicidad gozo Gozo placer Placer diversion Diversion satisfaccion Satisfaccion"
+		data-descripcion="Se feliz a tu manera porque la felicidad no es la que te dicen los demas, 
+		si no lo que te hace feliz">
+			<div class="item-contenido">
+				<img src="img/emociones/felicidad2.png" alt="" alt="la Felicidad" title="Felicidad">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Alegría"
+		data-etiquetas="Alegría alegría felicidad Felicidad gozo Gozo placer Placer diversion Diversion satisfaccion Satisfaccion"
+		data-descripcion="La felicidad esta hecha para ser compartida, disfruta siempre cada Momento
+		de la vida">
+			<div class="item-contenido">
+				<img src="img/emociones/gozo.png" alt="El Gozo" title="Gozo">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Ansiedad"
+		data-etiquetas="Ansiedad ansiedad angustia Angustia Estrés estrés Intranquilidad intranquilidad
+		Angustia angustia Agitación agitación"
+		data-descripcion="No soy mejor que nadie, pero nadie es mejor que yo">
+			<div class="item-contenido">
+				<img src="img/emociones/Intranquilidad.png" alt="La Intranquilidad" title="Intranquilidad">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Alegría"
+		data-etiquetas="Alegría alegría felicidad Felicidad gozo Gozo placer Placer diversion Diversion satisfaccion Satisfaccion"
+		data-descripcion="El Momento para ser feliz es ahora">
+			<div class="item-contenido">
+				<img src="img/emociones/diversion.png" alt="La Diversion" title="Diversion">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Ansiedad"
+		data-etiquetas="Ansiedad ansiedad angustia Angustia Estrés estrés Intranquilidad intranquilidad
+		Ansia ansia Agitación agitación"
+		data-descripcion="El temor agudiza los sentidos. La ansiedad la paraliza">
+			<div class="item-contenido">
+				<img src="img/emociones/estres.png" alt="El Estrés" title="Estrés">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="Ansiedad"
+		data-etiquetas="Ansiedad ansiedad angustia Angustia Estrés estrés Intranquilidad intranquilidad
+		Angustia angustia Agitación agitación"
+		data-descripcion="Cuanto mayor sea el sentimiento de inferioridad que se ha experimentdo
+		una persona, mas poderoso es el impulso de la conquista y más violenta es la agitación emocional">
+			<div class="item-contenido">
+				<img src="img/emociones/Agitacion.png" alt="La Agitación" title="Agitación">
+			</div>
+		</div>
+
+	</section>
+			
+<!-- Esto funciona cuando damos click a la imagen-->
+	<section class="overlay" id="overlay">
+		<div class="contenedor-img">
+			<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+			<img src="" alt="" title="Feeling in Neon Flashes" height="500">
+		</div>
+		<p class="descripcion"></p>
+	</section>
+</div>
+<footer style="color: white; padding: 15px 10px 10px;color: #9B9B9B;position: static;">
+	<h3 style="margin-left: 75px; margin-bottom: 5px">Integrantes del Grupo</h3>
+	<div class="primero" style="display: inline-flex;">
+		<div style="margin-right: 20px;border-right: 2px #9B9B9B">
+			<p>Camila Sandoval <tt>Lider del grupo</tt></p>
+			<p>Lorena Berrios</p>
+			<p>Angie Caldas</p>
+			<p>Alejandra Molano</p>
+		</div>
+		<div style="border-left: 2px solid #9B9B9B;padding: 2px 20px 10px; ">
+			<p>Juan Tique</p>
+			<p>Lida Peña</p>
+			<p>Yanella Araujo</p>
+			<p>Yesenia Bernal</p>
+		</div>
+	</div>
+	<p style="margin-left: 10px;margin-top: 5px;">Con la colaboración y orientación de Gabriela Lopez</p>
+</footer>
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
